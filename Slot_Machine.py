@@ -55,7 +55,7 @@ while game_on:
 
         if lines > 0:  # winning case
             print(
-                f'Congratulations! You win {winnings}!\n'
+                f'Congratulations! You win {bet * lines}!\n'
                 f'Your current balance is: {balance}!'
             )
             balance += bet + (bet * lines)  # this will add your current bet plus lines multiplied by your bet
