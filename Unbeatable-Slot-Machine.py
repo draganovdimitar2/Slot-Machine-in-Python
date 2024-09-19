@@ -5,16 +5,16 @@ def spin_reels_loss():
                '🍎', '🍍', '🍓', '🍇', '🍌', \
                '🥭', '🍐', '🥝', '🥥', '🍬',]
     
-    passed_symbols = []
+    passed_symbols = []  # The previous symbols of each line will be stored here
     
-    first_row = []
+    first_row = []  # This will be our first row
     for _ in range(3):
         new_symbol = symbols[random.randint(0,14)]
-        while new_symbol in passed_symbols:
+        while new_symbol in passed_symbols:  # This loop will iterate until each symbol is unique
             new_symbol = symbols[random.randint(0,14)]
-        first_row.append(new_symbol)
-        passed_symbols.append(new_symbol)
-        
+        first_row.append(new_symbol) #  Append our unique symbols in this row
+        passed_symbols.append(new_symbol) #  Append passed symbols so we can't choose them later in our next two rows
+# The logic is the same for each row ↓
     second_row = []
     for _ in range(3):
         new_symbol = symbols[random.randint(0,14)]
